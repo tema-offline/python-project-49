@@ -1,21 +1,23 @@
-from brain_games.cli import welcome_user
-from random import randint
+import random
 import prompt
+from brain_games.cli import welcome_user
+
+RULES = 'What number is missing in the progression?'
 
 
-RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
-
-
-def even_game():
+def progression_game():
     player_name = welcome_user()
     quanity = 0
     print(RULES)
     while quanity < 3:
-        question = randint(1, 100)
-        if question % 2 == 0:
-            answer = 'yes'
-        else:
-            answer = 'no'
+        step = random.randint(1, 10)
+        start = random.randint(1, 100)
+        stop = start + (step * 10)
+        progression = [str(x) for x in range(start, stop, step)]
+        skip = random.randint(0, 9)
+        answer = progression[skip]
+        progression[skip] = ".."
+        question = " ".join(progression)
         print(f'Question: {question}')
         player_answer = prompt.string("Your answer: ")
         if player_answer != str(answer):
@@ -31,7 +33,7 @@ def even_game():
 
 
 def main():
-    even_game()
+    progression_game()
 
 
 if __name__ == "__main__":
