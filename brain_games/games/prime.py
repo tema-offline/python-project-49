@@ -16,6 +16,6 @@ def prime(num):
 
 
 def run_game():
-    question = randint(0, 100)
+    question = randint(1, 100)
     answer = 'yes' if prime(question) else 'no'
     return (question, answer)
