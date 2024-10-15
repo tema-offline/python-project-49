@@ -5,9 +5,9 @@ import prompt
 def game_run(game):
     player_name = welcome_user()
     print(game.RULES)
-    quanity = 0
-    while quanity < 3:
-        question, answer = game.run_game()
+    correct_answer = 0
+    for _ in range(3):
+        question, answer = game.game_logic()
         print(f'Question: {question}')
         player_answer = prompt.string("Your answer: ")
         if player_answer != str(answer):
@@ -17,6 +17,6 @@ def game_run(game):
             break
         else:
             print('Correct!')
-        quanity += 1
-    if quanity == 3:
+        correct_answer += 1
+    if correct_answer == 3:
         print(f'Congratulations, {player_name}!')

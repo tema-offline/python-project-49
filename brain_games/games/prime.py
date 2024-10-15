@@ -6,16 +6,13 @@ RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 def prime(num):
     mx = math.sqrt(num)
-    i = 2
-    while i <= mx:
-        if num % i == 0:
+    for i in range(2, int(mx) + 1):
+        if num % i == 0 or num == 1:
             return False
-        else:
-            i += 1
     return True
 
 
-def run_game():
+def game_logic():
     question = randint(1, 100)
     answer = 'yes' if prime(question) else 'no'
     return (question, answer)

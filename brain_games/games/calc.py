@@ -2,10 +2,10 @@ from random import randint, choice
 from operator import add, sub, mul
 
 RULES = 'What is the result of the expression?'
-symbols = [("+", add), ("-", sub), ("*", mul)]
 
 
-def run_game():
+def game_logic():
+    symbols = [("+", add), ("-", sub), ("*", mul)]
     randint_1 = randint(1, 100)
     randint_2 = randint(1, 100)
     operator, func = choice(symbols)

@@ -3,7 +3,7 @@ from random import randint
 RULES = 'What number is missing in the progression?'
 
 
-def run_game():
+def game_logic():
     step = randint(1, 10)
     start = randint(1, 100)
     stop = start + (step * 10)
