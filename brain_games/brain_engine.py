@@ -1,13 +1,13 @@
 import prompt
 
 
-def game_run(game):
+def run(game):
+    max_score = 3
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print(game.RULES)
-    correct_answer = 0
-    for _ in range(3):
+    for _ in range(max_score):
         question, answer = game.game_logic()
         print(f'Question: {question}')
         player_answer = prompt.string("Your answer: ")
@@ -18,6 +18,5 @@ def game_run(game):
             break
         else:
             print('Correct!')
-        correct_answer += 1
-    if correct_answer == 3:
+    else:
         print(f'Congratulations, {name}!')
