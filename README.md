@@ -11,3 +11,5 @@ https://asciinema.org/a/DKwq62jsJWqcvPDh46LNP5iQk
 https://asciinema.org/a/uP3fpFLaj16gbBCCZ37XiKIRw
 ### Asciinema test_brain-prime:
 https://asciinema.org/a/A4BS4XQKOqTaKWSsl7FI7SZIM
+
+<script src="https://asciinema.org/a/0kzKU1iv9Nvt8XLfwULUOTtYd.js" id="0kzKU1iv9Nvt8XLfwULUOTtYd" async></script>
